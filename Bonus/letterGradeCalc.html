@@ -11,13 +11,7 @@
     <div>
       <h2>قم بإدخال مجموع درجاتك بالأرقام</h2>
       <div class="center">
-        <input
-          dir="rtl"
-          type="text"
-          placeholder="درجتك بالأرقام"
-          id="inputNumber"
-          style="text-align: center; font-size: 1.5rem; margin: 1rem"
-        />
+        <input dir="rtl" type="text" placeholder="درجتك بالأرقام" id="inputNumber" style="text-align: center; font-size: 1.5rem; margin: 1rem" />
       </div>
       <div class="center">
         <button onclick="getLetterGrade();">درجتك بالحروف</button>
@@ -44,9 +38,22 @@
               B        80 - 95
               A        90 - 100
         */
-        if (condition) {
+        if (total >= 60 && total <= 69) {
           document.getElementById("status").innerHTML = "D";
         }
+
+        if (total >= 70 && total <= 79) {
+          document.getElementById("status").innerHTML = "C";
+        }
+
+        if (total >= 80 && total <= 95) {
+          document.getElementById("status").innerHTML = "B";
+        }
+
+        if (total >= 90 && total <= 100) {
+          document.getElementById("status").innerHTML = "A";
+        }
+
         // أكمل
       }
     </script>

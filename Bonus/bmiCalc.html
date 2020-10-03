@@ -9,31 +9,12 @@
   <body>
     <div>
       <!-- السؤال الرابع -->
-      <h2 style="text-align: center; font-size: 1.5rem; margin: 1rem">
-        قم بإدخال طولك بالأمتار
-      </h2>
+      <h2 style="text-align: center; font-size: 1.5rem; margin: 1rem">قم بإدخال طولك بالأمتار</h2>
       <div class="center">
-        <input
-          dir="rtl"
-          type="text"
-          placeholder="طولك بال m"
-          id="height"
-          style="text-align: center; font-size: 1rem; margin: 0.4rem"
-        />
+        <input dir="rtl" type="text" placeholder="طولك بال m" id="height" style="text-align: center; font-size: 1rem; margin: 0.4rem" />
       </div>
       <div class="center">
-        <input
-          dir="rtl"
-          type="text"
-          placeholder="وزنك بال kg"
-          id="weight"
-          style="
-            text-align: center;
-            font-size: 1rem;
-            margin: 0.4rem;
-            margin-bottom: 1rem;
-          "
-        />
+        <input dir="rtl" type="text" placeholder="وزنك بال kg" id="weight" style="text-align: center; font-size: 1rem; margin: 0.4rem; margin-bottom: 1rem" />
       </div>
       <div class="center">
         <button onclick="getBMI();">احسب</button>
@@ -64,9 +45,18 @@
               يا للهول! 😲          أكبر من أو يساوي 30
               لا أدري! 🤷🏻‍♀️                   أي شي ثاني
         */
-        if (condition) {
+        var bmiEq = weight / (height * height);
+        //console.log(bmiEq);
+        if (bmiEq < 20) {
           document.getElementById("status").innerHTML = "أنت نحيف للغاية";
+        } else if (bmiEq >= 20 && bmiEq < 29) {
+          document.getElementById("status").innerHTML = "وزنك جيد";
+        } else if (bmiEq >= 30) {
+          document.getElementById("status").innerHTML = "ياللهول";
+        } else {
+          document.getElementById("status").innerHTML = "لا ادري";
         }
+
         // أكمل
       }
     </script>
